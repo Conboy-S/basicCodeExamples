@@ -1,0 +1,9 @@
+//Todays temperature thus let keyword
+let kelvin = 293;
+//Celsius is 273 degrees less than kelvin
+let celsius = kelvin - 273;
+//Formula to convert celsius to fahrenheit
+let fahrenheit = celsius * (9/5) + 32;
+//To prevent decimals
+Math.floor(fahrenheit);
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit`);
