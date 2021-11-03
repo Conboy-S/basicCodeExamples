@@ -1,0 +1,7 @@
+const lifePhase = age => 
+ age < 0 || age > 140 ? 'This is not a valid age' : 
+ age < 4 ? 'baby' :
+ age < 13 ? 'child' : 
+ age < 20 ? 'teen' :
+ age < 65 ? 'adult' :
+ age <= 140 ? 'senior citizen': 'error';
