@@ -1,0 +1,55 @@
+let buccaneers = {
+  _players: [{
+      firstName: 'Tom', lastName: 'Brady', age: 44,
+    },
+    {
+      firstName: 'Lavonte', lastName: 'David', age: 31,
+    },
+    {
+      firstName: 'Mike', lastName: 'Evans', age: 29,
+    },
+  ],
+  _games: [{
+      opponent: 'Cowboys', teamPoints: 31, opponentPoints: 29
+      },
+      {
+        opponent: 'Falcons', teamPoints: 48, opponentPoints: 25
+        },
+        {
+          opponent: 'Rams', teamPoints: 24, opponentPoints: 34
+          },
+],
+  get players() {
+    return this._players;
+  },
+  get games() {
+    return this._games;
+  },
+  addPlayer(firstName, lastName, age) {
+    let player = {
+      firstName: firstName,
+      lastName: lastName,
+      age: age
+      };
+      this.players.push(player);
+  },
+
+  addgame(opponent, teamPoints, opponentPoints) {
+    let game = {
+      opponent: opponent,
+      teamPoints: teamPoints,
+      opponentPoints: opponentPoints
+      };
+      this.games.push(game);
+  },
+};
+
+buccaneers.addPlayer('Devin', 'White', 24);
+buccaneers.addPlayer('Chris', 'Godwin', 26);
+buccaneers.addPlayer('Vita', 'Vea', 25);
+buccaneers.addgame('Patriots', 19, 17);
+buccaneers.addgame('Dolphins', 45, 17);
+buccaneers.addgame('Eagle', 28, 22);
+
+console.log(buccaneers.players);
+console.log(buccaneers.games);
